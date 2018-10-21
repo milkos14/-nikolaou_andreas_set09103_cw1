@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block head %}    
+    {{ super() }}
+{% endblock %}
+ {% block content %}
+  {% with messages = get_flashed_messages() %}
+   {% if messages %}
+    <ul>
+     {% for message in messages %}
+       <li>{{ message }} </li>
+     {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<style>
+img {
+   display: block;
+   width: 60%;
+   margin-left: auto;
+   margin-right: auto;  
+}
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+</style>
+<center><h1>Grown Ups</h1></center>
+<img src="https://m.media-amazon.com/images/M/MV5BMjA0ODYwNzU5Nl5BMl5BanBnXkFtZTcwNTI1MTgxMw@@._V1_SY1000_CR0,0,674,1000_AL_.jpg">
+<center><h2>About</h2></center>
+
+<center><p>Just because you grow older doesn't mean you have to grow up! Comedy superstars Adam Sandler, Kevin James, Chris
+ Rock, David Spade and Rob Schneider are at their hilarious and outrageous best playing childhood friends who reunite
+ one holiday weekend to relive the good old days. It doesn't matter that these five guys are now respectable
+ businessmen, husbands and fathers. Once they get back together, nothing is going to stop these kids-at-heart from
+ having the time of their adult lives. From the people who brought you "CLICK", comes this hilarious and heartwarming
+ film that proves men will be boys.</p></center>
+
+<table>
+  <tr>
+    <th>Genre</th>
+    <th>Directed By</th>
+    <th>Written By</th>
+    <th>Runtime</th>
+  </tr>
+  <tr>
+    <td>Comedy</td>
+    <td>Dennis Dugan</td>
+    <td>Adam Sandler, Fred Wolf</td>
+    <td>102 Minutes</td>
+  </tr>
+</table>
+{% endblock %}

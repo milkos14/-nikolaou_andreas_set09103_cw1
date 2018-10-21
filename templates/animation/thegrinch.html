@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block head %}    
+    {{ super() }}
+{% endblock %}
+ {% block content %}
+  {% with messages = get_flashed_messages() %}
+   {% if messages %}
+    <ul>
+     {% for message in messages %}
+       <li>{{ message }} </li>
+     {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<style>
+img {
+   display: block;
+   width: 60%;
+   margin-left: auto;
+   margin-right: auto;
+}
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+</style>
+<center><h1>The Grinch</h1></center>
+<img src="https://m.media-amazon.com/images/M/MV5BZGJiNmM3MDktOWFlMS00YjMzLWIwNTctZmM0OWRkMzVjNTE5XkEyXkFqcGdeQXVyOTA4OTU5OTk@._V1_SY1000_CR0,0,817,1000_AL_.jpg">
+<center><h2>About</h2></center>
+
+<center><p>A grumpy Grinch plots to ruin Christmas for the village of Whoville.</p></center>
+
+<table>
+  <tr>
+    <th>Genre</th>
+    <th>Directed By</th>
+    <th>Written By</th>
+    <th>Runtime</th>
+  </tr>
+  <tr>
+    <td>Animation</td>
+    <td> Yarrow Cheney, Scott Mosier</td>
+    <td>Michael LeSieur (screenplay by), Dr. Seuss (based on the book by)</td>
+    <td>90 Minutes</td>
+  </tr>
+</table>
+{% endblock %}

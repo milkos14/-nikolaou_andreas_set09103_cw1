@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block head %}    
+    {{ super() }}
+{% endblock %}
+ {% block content %}
+  {% with messages = get_flashed_messages() %}
+   {% if messages %}
+    <ul>
+     {% for message in messages %}
+       <li>{{ message }} </li>
+     {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<style>
+img {
+   display: block;
+   width: 60%;
+   margin-left: auto;
+   margin-right: auto;
+}
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+</style>
+<center><h1>The Avengers</h1></center>
+<img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,675,1000_AL_.jpg">
+<center><h2>About</h2></center>
+
+<center><p>Earth's mightiest heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.</p></center>
+
+<table>
+  <tr>
+    <th>Genre</th>
+    <th>Directed By</th>
+    <th>Written By</th>
+    <th>Runtime</th>
+  </tr>
+  <tr>
+    <td>Action</td>
+    <td>Joss Whedon</td>
+    <td>Joss Whedon (screenplay), Zak Penn (story)</td>
+    <td>143 Minutes</td>
+  </tr>
+</table>
+{% endblock %}

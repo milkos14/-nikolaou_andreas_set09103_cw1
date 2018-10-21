@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block head %}    
+    {{ super() }}
+{% endblock %}
+ {% block content %}
+  {% with messages = get_flashed_messages() %}
+   {% if messages %}
+    <ul>
+     {% for message in messages %}
+       <li>{{ message }} </li>
+     {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<style>
+img {
+   display: block;
+   width: 60%;
+   margin-left: auto;
+   margin-right: auto;
+}
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+</style>
+<center><h1>George of the Jungle</h1></center>
+<img src="https://m.media-amazon.com/images/M/MV5BNTdiM2VjYjYtZjEwNS00ZWU5LWFkZGYtZGYxMDcwMzY1OTEzL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTczNjQwOTY@._V1_.jpg">
+<center><h2>About</h2></center>
+
+<center><p>A man raised in the jungle by apes falls in love with a wealthy American heiress.</p></center>
+
+<table>
+  <tr>
+    <th>Genre</th>
+    <th>Directed By</th>
+    <th>Written By</th>
+    <th>Runtime</th>
+  </tr>
+  <tr>
+    <td>Action</td>
+    <td> Sam Weisman</td>
+    <td>Jay Ward (characters), Dana Olsen (story)</td>
+    <td>92 Minutes</td>
+  </tr>
+</table>
+{% endblock %}

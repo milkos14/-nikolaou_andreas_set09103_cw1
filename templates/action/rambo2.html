@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block head %}    
+    {{ super() }}
+{% endblock %}
+ {% block content %}
+  {% with messages = get_flashed_messages() %}
+   {% if messages %}
+    <ul>
+     {% for message in messages %}
+       <li>{{ message }} </li>
+     {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<style>
+img {
+   display: block;
+   width: 60%;
+   margin-left: auto;
+   margin-right: auto;
+}
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+</style>
+<center><h1>Rambo: First Blood Part II</h1></center>
+<img src="https://m.media-amazon.com/images/M/MV5BZWFkY2I1ZDAtNmZhNS00NjVlLWJiMGQtMGQ1ZmM0ZDA5ODg5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SY1000_CR0,0,640,1000_AL_.jpg">
+<center><h2>About</h2></center>
+
+<center><p>John Rambo is released from prison by the government for a top-secret covert mission to the last place on Earth he'd want to return - the jungles of Vietnam.</p></center>
+
+<table>
+  <tr>
+    <th>Genre</th>
+    <th>Directed By</th>
+    <th>Written By</th>
+    <th>Runtime</th>
+  </tr>
+  <tr>
+    <td>Action</td>
+    <td>George P. Cosmatos</td>
+    <td> David Morrell (based on characters created by), Kevin Jarre (story by)</td>
+    <td>96 Minutes</td>
+  </tr>
+</table>
+{% endblock %}
